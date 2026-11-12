@@ -1,5 +1,8 @@
-package componente.servicios;
+package componente.servicios.serviciosLocales;
 
+import componente.servicios.FabricaServicios;
+import componente.servicios.Servicio;
+import componente.servicios.serviciosLocales.servicioInicialLocal.ServicioInicializacionLocal;
 import sistema.SistemaLocal;
 
 public class FabricaServiciosLocales implements FabricaServicios{
@@ -11,7 +14,7 @@ public class FabricaServiciosLocales implements FabricaServicios{
     }
 
     @Override public Servicio<?, ?> crearServicioInicializacion(){
-        return new ServicioInicializacionLocal(this.sistemLocal);
+        return new ServicioInicializacionLocal(sistemaLocal);
     }
 
 
